@@ -11,6 +11,10 @@
         <div class="header">
             <h1>Welcome, Student (12345)</h1>
             <p>Select Your Courses for This Semester</p>
+            <div class="stats">
+                <span>Total Registered Courses: <b id="count">0</b></span>
+                <span>Total Credits: <b id="credits">0</b></span>
+            </div>
             <button onclick="logout()" class="logout-btn">Logout</button>
         </div>
 
@@ -18,27 +22,33 @@
             <div class="course-card">
                 <h3>CS-101 - Software Engineering</h3>
                 <p>Teacher: Mam Qurat Ul Ain | Credits: 3</p>
-                <button onclick="register(this)">Register</button>
+                <button onclick="register(this, 3)">Register</button>
             </div>
             <div class="course-card">
                 <h3>CS-201 - Data Structures</h3>
                 <p>Teacher: Sir Laal Khan | Credits: 3</p>
-                <button onclick="register(this)">Register</button>
+                <button onclick="register(this, 3)">Register</button>
             </div>
             <div class="course-card">
                 <h3>CS-202 - Computer Networks</h3>
                 <p>Teacher: Mam Sehrish | Credits: 3</p>
-                <button onclick="register(this)">Register</button>
+                <button onclick="register(this, 3)">Register</button>
             </div>
         </div>
         <p id="reg-msg"></p>
     </div>
     <script>
-        function register(btn) {
+        let totalCount = 0;
+        let totalCredits = 0;
+        function register(btn, credit) {
             btn.innerText = "Registered ✓";
             btn.style.background = "green";
             btn.disabled = true;
+            totalCount++;
+            totalCredits += credit;
             document.getElementById("reg-msg").innerText = "Course Registered Successfully!";
+            document.getElementById("count").innerText = totalCount;
+            document.getElementById("credits").innerText = totalCredits;
         }
         function logout() {
             window.location.href = "index.html";
