@@ -3,24 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>University Course Registration</title>
+    <title>University - Course Registration System</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>University Course Registration</h1>
-            <p>Project Assigned by Sir Laal Khan</p>
+    <nav class="navbar">
+        <div class="logo">🎓 Ghazi University Dera Ghazi Khan</div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#courses">Courses</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="login.html" class="login-btn">Sign In / Login</a>
         </div>
-        <div class="login-box">
-            <h2>Student Login</h2>
-            <input type="text" id="studentId" placeholder="Enter Student ID">
-            <input type="password" id="password" placeholder="Enter Password">
-            <button onclick="login()">Login</button>
-            <p id="message"></p>
-            <p class="note">Demo ID: 12345 | Password: 12345</p>
+    </nav>
+
+    <div class="hero">
+        <h1>Welcome to Ghazi University</h1>
+        <p>Learn, Grow & Build Your Future With Us</p>
+        <p>Admissions Open - Spring 2026 Semester</p>
+        <a href="login.html" class="hero-btn">Student Login →</a>
+        <a href="#courses" class="hero-btn2">View Courses</a>
+    </div>
+
+    <div class="home-courses" id="courses">
+        <h2>Popular Courses</h2>
+        <div class="cards-row">
+            <div class="home-card">
+                <h3>💻 Computer Networks</h3>
+                <p>Learn Network Architecture, Security & Protocols</p>
+                <p><b>Teacher:</b> Mam Sehrish</p>
+            </div>
+            <div class="home-card">
+                <h3>Data Structures And Algorithms</h3>
+                <p>Learn Data Organization, Analysis & Problem Solving</p>
+                <p><b>Teacher:</b> Sir Laal Khan</p>
+            </div>
+            <div class="home-card">
+                <h3>Software Engineering</h3>
+                <p>Learn Software Design, Development & Testing</p>
+                <p><b>Teacher:</b> Mam Qurat Ul Ain</p>
+            </div>
         </div>
     </div>
-    <script src="script.js"></script>
+
+    <footer>
+        <p>© 2026 My University | Developed by Asif Khan</p>
+        <p>Email: info@myuniversity.edu.pk | Lahore, Pakistan</p>
+    </footer>
+
 </body>
 </html>
