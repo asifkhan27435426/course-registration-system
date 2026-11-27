@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Course Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dash-container">
+        <div class="header">
+            <h1>Welcome, Student (12345)</h1>
+            <p>Select Your Courses for This Semester</p>
+            <button onclick="logout()" class="logout-btn">Logout</button>
+        </div>
+
+        <div class="course-list">
+            <div class="course-card">
+                <h3>CS-101 - Software Engineering</h3>
+                <p>Teacher: Mam Qurat Ul Ain | Credits: 3</p>
+                <button onclick="register(this)">Register</button>
+            </div>
+            <div class="course-card">
+                <h3>CS-201 - Data Structures</h3>
+                <p>Teacher: Sir Laal Khan | Credits: 3</p>
+                <button onclick="register(this)">Register</button>
+            </div>
+            <div class="course-card">
+                <h3>CS-202 - Computer Networks</h3>
+                <p>Teacher: Mam Sehrish | Credits: 3</p>
+                <button onclick="register(this)">Register</button>
+            </div>
+        </div>
+        <p id="reg-msg"></p>
+    </div>
+    <script>
+        function register(btn) {
+            btn.innerText = "Registered ✓";
+            btn.style.background = "green";
+            btn.disabled = true;
+            document.getElementById("reg-msg").innerText = "Course Registered Successfully!";
+        }
+        function logout() {
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+</html>
